@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <?= $title ?>
+  </div>
+  <div class="row alert <?= $result_class; ?>" role="alert">
+    <?= $result_message; ?>
+  </div>
+  <div class="row text-center">
+    <?= anchor("", "Fermer", ['class' => "btn btn-default"]); ?>
+  </div>
+</div>
+
