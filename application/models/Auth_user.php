@@ -1,7 +1,7 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Auth_user extends CI_Model {
+class Auth_user extends CI_Model 
+{
 
     protected $_username;
     protected $_id;
@@ -57,8 +57,8 @@ class Auth_user extends CI_Model {
         }
     }
 
-    //va charge le user => va chercher le user dans la DB à partir du username
-    protected function load_user( $username) {
+    //va charger le user => va chercher le user dans la DB à partir du username
+    protected function load_user($username) {
         return $this->db
                     ->select('id, username, password')
                     ->from('login')
@@ -69,8 +69,8 @@ class Auth_user extends CI_Model {
     }
 
     //permet de vérifier si le password correspond au user
-    public function login( $username, $password) {
-        $user = $this->load_user( $username);
+    public function login($username, $password) {
+        $user = $this->load_user($username);
         if (( $user !== NULL) && password_verify($password, $user->password)) {
             $this->_id = $user->id;
             $this->_username = $user->username;
