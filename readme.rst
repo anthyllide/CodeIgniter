@@ -36,7 +36,7 @@ such old versions of PHP, because of potential security and performance
 issues, as well as missing features.
 
 ************
-Installation
+1 Installation
 ************
 
 Please see the `installation section <https://codeigniter.com/user_guide/installation/index.html>`_
